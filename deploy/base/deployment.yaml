@@ -1,0 +1,40 @@
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: pokedex-api
+
+spec:
+  replicas: 2
+  revisionHistoryLimit: 3
+  selector:
+    matchLabels:
+      app: pokedex-api
+  template:
+    metadata:
+      labels:
+        app: pokedex-api
+    spec:
+      containers:
+        - image: pokeapi:1.0.0
+          name: pokeapi
+          ports:
+            - containerPort: 3000
+          env:
+            - name: POKEDEX_START_NUMBER
+              valueFrom:
+                configMapKeyRef:
+                  name: pokedex-api-start-number
+                  key: POKEDEX_START_NUMBER
+            - name: POKEDEX_END_NUMBER
+              valueFrom:
+                configMapKeyRef:
+                  name: pokedex-api-end-number
+                  key: POKEDEX_END_NUMBER
+            - name: POKEDEX_NAME
+              valueFrom:
+                configMapKeyRef:
+                  name: pokedex-api-name
+                  key: POKEDEX_NAME
+
+  
