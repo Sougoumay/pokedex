@@ -3,7 +3,7 @@ kind: Kustomization
 
 namePrefix: kustomize-
 
-namespace: guestbook-kustomize
+namespace: pokedex-kustomize
 
 resources:
   - base/
