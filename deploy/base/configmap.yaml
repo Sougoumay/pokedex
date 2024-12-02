@@ -4,5 +4,5 @@ metadata:
   name: pokedex-api-cm
 data:
   POKEDEX_START_NUMBER: "1"
-  POKEDEX_END_NUMBER: "2"
+  POKEDEX_END_NUMBER: "32"
   POKEDEX_NAME: "hamid-pokedex"

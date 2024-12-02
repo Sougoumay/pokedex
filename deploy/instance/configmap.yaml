@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfigMap
+metadata: 
+  name: pokedex-instance-cm
+data:
+  POKEDEX_START_NUMBER: "6"
+  POKEDEX_END_NUMBER: "29"
+  POKEDEX_NAME: "hamid-pokedex-instance"
