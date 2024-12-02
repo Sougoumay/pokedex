@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 
 metadata:
-  name: pokedex-api
+  name: pokedex-api-instance
 
 spec:
   replicas: 2
