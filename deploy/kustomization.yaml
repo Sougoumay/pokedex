@@ -3,7 +3,7 @@ kind: Kustomization
 
 namePrefix: kustomize-
 
-namespace: pokedex-kustomize
+namespace: pokedex-api
 
 resources:
   - base/
