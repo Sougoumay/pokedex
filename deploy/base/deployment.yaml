@@ -24,17 +24,17 @@ spec:
             - name: POKEDEX_START_NUMBER
               valueFrom:
                 configMapKeyRef:
-                  name: pokedex-api-start-number
+                  name: pokedex-api-cm
                   key: POKEDEX_START_NUMBER
             - name: POKEDEX_END_NUMBER
               valueFrom:
                 configMapKeyRef:
-                  name: pokedex-api-end-number
+                  name: pokedex-api-cm
                   key: POKEDEX_END_NUMBER
             - name: POKEDEX_NAME
               valueFrom:
                 configMapKeyRef:
-                  name: pokedex-api-name
+                  name: pokedex-api-cm
                   key: POKEDEX_NAME
 
   
