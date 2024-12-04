@@ -16,7 +16,7 @@ spec:
         app: pokedex-api
     spec:
       containers:
-        - image: ghcr.io/froissant/pokedex:main
+        - image: ghcr.io/Sougoumay/pokedex:main
           imagePullPolicy: Always
           name: pokeapi
           ports:
