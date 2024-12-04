@@ -88,10 +88,10 @@ jobs:
         uses: syntaqx/setup-kustomize@v1
 
       - name: Edit manifest for Instance
-        run: cd deploy/instance && kustomize edit set image ghcr.io/Sougoumay/pokedex:main=${{ steps.output_variables.outputs.image_tag }}
+        run: cd deploy/instance && kustomize edit set image ghcr.io/sougoumay/pokedex:main=${{ steps.output_variables.outputs.image_tag }}
 
       - name: Edit manifest for Base
-        run: cd deploy/base && kustomize edit set image ghcr.io/Sougoumay/pokedex:main=${{ steps.output_variables.outputs.image_tag }}
+        run: cd deploy/base && kustomize edit set image ghcr.io/sougoumay/pokedex:main=${{ steps.output_variables.outputs.image_tag }}
 
       - uses: stefanzweifel/git-auto-commit-action@v5
         with:
