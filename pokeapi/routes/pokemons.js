@@ -5,6 +5,8 @@ async function routes(fastify, options) {
             const min_range = parseInt(request.query.start) || parseInt(process.env.POKEDEX_START_NUMBER) || 1;
             const max_range = parseInt(request.query.end) || parseInt(process.env.POKEDEX_END_NUMBER) || 1;
 
+            
+
             if (max_range < min_range) {
                 return fastify.httpErrors.badRequest("Parameter 'end' must be greater than 'start'");
             }
