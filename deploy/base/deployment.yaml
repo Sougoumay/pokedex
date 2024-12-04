@@ -22,7 +22,7 @@ spec:
           ports:
             - containerPort: 3000
           envFrom:
-            - conifMapKeyRef:
+            - configMapRef:
                 name: pokedex-api-cm
           livenessProbe:
             httpGet:
