@@ -16,25 +16,19 @@ spec:
         app: pokedex-api
     spec:
       containers:
-        - image: pokeapi:1.0.0
+        - image: ghcr.io/froissant/pokedex:main
+          imagePullPolicy: Always
           name: pokeapi
           ports:
             - containerPort: 3000
-          env:
-            - name: POKEDEX_START_NUMBER
-              valueFrom:
-                configMapKeyRef:
-                  name: pokedex-api-cm
-                  key: POKEDEX_START_NUMBER
-            - name: POKEDEX_END_NUMBER
-              valueFrom:
-                configMapKeyRef:
-                  name: pokedex-api-cm
-                  key: POKEDEX_END_NUMBER
-            - name: POKEDEX_NAME
-              valueFrom:
-                configMapKeyRef:
-                  name: pokedex-api-cm
-                  key: POKEDEX_NAME
-
-  
+          envFrom:
+            - conifMapKeyRef:
+                name: pokedex-api-svc
+          livenessProbe:
+            httpGet:
+              path: /
+              port: http
+          readinessProbe:
+            httpGet:
+              path: /
+              port: http

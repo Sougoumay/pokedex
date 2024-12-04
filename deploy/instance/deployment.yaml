@@ -16,7 +16,8 @@ spec:
         app: pokedex-api-instance
     spec:
       containers:
-        - image: pokeapi:1.0.0
+        - image: ghcr.io/froissant/pokedex:main
+          imagePullPolicy: Always
           name: pokeapi
           ports:
             - containerPort: 3000
