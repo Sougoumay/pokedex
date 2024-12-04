@@ -8,4 +8,4 @@ resources:
 images:
 - name: ghcr.io/sougoumay/pokedex:main
   newName: ghcr.io/sougoumay/pokedex
-  newTag: sha-a20e56b
+  newTag: sha-4423edb
