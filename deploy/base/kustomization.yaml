@@ -2,6 +2,10 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 
 resources:
-  - deployment.yaml
-  - svc.yaml
-  - configmap.yaml
+- deployment.yaml
+- svc.yaml
+- configmap.yaml
+images:
+- name: ghcr.io/Sougoumay/pokedex:main
+  newName: ghcr.io/sougoumay/pokedex
+  newTag: sha-a20e56b
