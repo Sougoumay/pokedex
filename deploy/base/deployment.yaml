@@ -23,7 +23,7 @@ spec:
             - containerPort: 3000
           envFrom:
             - conifMapKeyRef:
-                name: pokedex-api-svc
+                name: pokedex-api-cm
           livenessProbe:
             httpGet:
               path: /
