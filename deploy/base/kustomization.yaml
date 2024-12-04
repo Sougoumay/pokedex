@@ -6,6 +6,6 @@ resources:
 - svc.yaml
 - configmap.yaml
 images:
-- name: ghcr.io/Sougoumay/pokedex:main
+- name: ghcr.io/sougoumay/pokedex:main
   newName: ghcr.io/sougoumay/pokedex
   newTag: sha-a20e56b
