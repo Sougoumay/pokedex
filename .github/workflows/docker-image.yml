@@ -36,6 +36,7 @@ jobs:
           SONAR_HOST_URL: ${{ vars.SONAR_HOST_URL }}
         with:
           projectBaseDir: pokeapi
+          args: '-Dsonar.projectKey=hamid-pokedex'
       - name: Official SonarQube Scan
         uses: SonarSource/sonarqube-scan-action@v4.1.0
         env:
