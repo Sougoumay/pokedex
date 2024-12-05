@@ -7,3 +7,8 @@ resources:
   - configmap.yaml
   - pre-sync-job.yaml
   - post-sync-job.yaml
+
+images:
+- name: ghcr.io/sougoumay/pokedex:main
+  newName: ghcr.io/sougoumay/pokedex
+  newTag: sha-4423edb
