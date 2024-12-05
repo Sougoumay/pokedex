@@ -5,3 +5,5 @@ resources:
   - deployment.yaml
   - svc.yaml
   - configmap.yaml
+  - pre-sync-job.yaml
+  - post-sync-job.yaml
