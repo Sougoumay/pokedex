@@ -21,6 +21,7 @@ spec:
           name: pokeapi
           ports:
             - containerPort: 3000
+              name: http
           envFrom:
             - configMapRef:
                 name: pokedex-api-cm
