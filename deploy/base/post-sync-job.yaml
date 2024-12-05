@@ -1,0 +1,14 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: postsync-job
+  annotations:
+    argocd.argoproj.io/hook: PostSync
+spec:
+  template:
+    spec:
+      containers:
+      - name: postsync
+        image: alpine
+        command: ["sh", "-c", "echo 'Running PostSync Job for Pokedex'; sleep 10"]
+      restartPolicy: Never

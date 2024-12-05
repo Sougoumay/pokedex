@@ -1,0 +1,14 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: presync-job
+  annotations:
+    argocd.argoproj.io/hook: PreSync
+spec:
+  template:
+    spec:
+      containers:
+      - name: presync
+        image: alpine
+        command: ["sh", "-c", "echo 'Running PreSync Job for Pokedex'; sleep 10"]
+      restartPolicy: Never
