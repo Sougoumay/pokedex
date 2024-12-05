@@ -21,6 +21,7 @@ spec:
           name: pokeapi
           ports:
             - containerPort: 3000
+              name: http
           env:
             - name: POKEDEX_START_NUMBER
               valueFrom:
